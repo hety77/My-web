@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Mensaje para Day ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* --- Estilos Generales y Fondo Animado --- */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #f8cdda, #d0b7e2, #a7b3e0, #b4d8e2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            overflow: hidden; /* Evita barras de scroll por las partículas */
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- Contenedor Principal (Tarjeta de Cristal) --- */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 3em 4em;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #2c3e50;
+            animation: fadeIn 1.5s ease-out;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: scale(1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(0.95);
+            }
+        }
+
+        /* --- Título Principal --- */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0 0 0.5rem 0;
+            color: #3a2d5c;
+            letter-spacing: 1px;
+        }
+
+        /* --- Párrafo "De parte de" --- */
+        .from-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0;
+            color: #4a4e69;
+        }
+
+        /* --- Nombre y Emojis --- */
+        .name {
+            font-weight: bold;
+            color: #d63384; /* Un rosa vibrante para el nombre */
+        }
+
+        .emoji {
+            display: inline-block;
+            font-size: 1.2em;
+            animation: pulse 1.8s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.25);
+            }
+        }
+
+        /* --- Adaptación para móviles --- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 2em 1.5em;
+                margin: 1em;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .from-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal con el mensaje -->
+    <div class="container">
+        <h1>Te amo muchísimo Day</h1>
+        <p class="from-text">
+            De parte de <span class="name">Hety</span> <span class="emoji">💖</span>✨
+        </p>
+    </div>
+
+</body>
+</html>
