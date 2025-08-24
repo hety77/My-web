@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recursos | Colegio Lincoln</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #fff;
+    }
+    header {
+      background-color: #1E90FF;
+      color: white;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 2rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+    nav ul li a:hover { opacity: 0.85; }
+
+    main {
+      margin-top: 90px;
+      padding: 5rem 5%;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main h1 {
+      font-size: 2.5rem;
+      color: #1E90FF;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .resource {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: #f8fbff;
+      border: 1px solid #e0e7ff;
+      border-radius: 12px;
+    }
+    .resource h2 {
+      color: #1E90FF;
+      margin-bottom: 0.8rem;
+    }
+    .resource a {
+      color: #1E90FF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .resource a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: #e6f7ff;
+      border-radius: 12px;
+      border: 1px solid #b3daff;
+    }
+    .contact p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: #f0f7ff;
+      padding: 2rem 5%;
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #d0e5ff;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      nav ul { margin-top: 1rem; }
+      nav ul li { margin-left: 1rem; margin-right: 1rem; }
+      main { padding: 3rem 5%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Colegio Lincoln | ESI</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="que-es-esi.html">¿Qué es ESI?</a></li>
+        <li><a href="temas-clave.html">Temas Clave</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Recursos y Apoyo</h1>
+
+    <div class="resource">
+      <h2>Videos Educativos</h2>
+      <p>Mirá estos videos oficiales del Ministerio de Educación sobre ESI:</p>
+      <p><a href="https://www.youtube.com/playlist?list=PLa8qGjEPiRO2jIaOqZkNqYv0sVZ7h5JjP" target="_blank">▶️ Playlist: ESI en la Escuela (YouTube)</a></p>
+    </div>
+
+    <div class="resource">
+      <h2>Guías para Estudiantes</h2>
+      <p><a href="https://www.argentina.gob.ar/sites/default/files/guia_esi_estudiantes.pdf" target="_blank">📘 Descargar: Guía de ESI para adolescentes (PDF)</a></p>
+    </div>
+
+    <div class="resource">
+      <h2>Líneas Gratuitas de Ayuda</h2>
+      <p><strong>Linea 138</strong>: Atención gratuita y confidencial sobre sexualidad, salud reproductiva y violencia. <br> <strong>WhatsApp: 11 5050 7171</strong></p>
+      <p><a href="https://www.argentina.gob.ar/138" target="_blank">🔗 Más info: www.argentina.gob.ar/138</a></p>
+    </div>
+
+    <div class="contact">
+      <h2>¿Tenés dudas o querés hablar?</h2>
+      <p>Podés acercarte al equipo de orientación escolar del Colegio Lincoln. Estamos para escucharte, acompañarte y responder tus preguntas con respeto y confidencialidad.</p>
+      <p><strong>Horario de atención:</strong> Lunes a Viernes de 9 a 15 h<br>
+      <strong>Email:</strong> orientacion@colegiolincoln.edu.ar</p>
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>Colegio Lincoln</strong></p>
+    <p>ESI - Educación Sexual Integral | 2025</p>
+    <p>Contenido revisado por el equipo pedagógico. Adecuado para estudiantes adolescentes.</p>
+  </footer>
+</body>
+</html>
