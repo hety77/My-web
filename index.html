@@ -1,188 +1,366 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ESI en Lincoln | Colegio Lincoln</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      line-height: 1.6;
-      background-color: #fff;
-    }
-    header {
-      background-color: #1E90FF;
-      color: white;
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-    header .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-    nav ul li {
-      margin-left: 2rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-    nav ul li a:hover { opacity: 0.85; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje de Amor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .hero {
-      margin-top: 80px;
-      background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
-      padding: 6rem 5% 4rem;
-      text-align: center;
-      border-bottom: 1px solid #e0e7ff;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      color: #1E90FF;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #444;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-    .btn {
-      display: inline-block;
-      background-color: #1E90FF;
-      color: white;
-      padding: 0.8rem 1.8rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
-    }
-    .intro {
-      padding: 4rem 5%;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .intro h2 {
-      font-size: 2rem;
-      color: #1E90FF;
-      margin-bottom: 1.5rem;
-    }
-    .intro p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .card {
-      background: #f8fbff;
-      border: 1px solid #e0e7ff;
-      border-radius: 12px;
-      padding: 1.8rem;
-      width: 300px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-    .card:hover { transform: translateY(-10px); }
-    .card h3 {
-      color: #1E90FF;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-    .card p {
-      color: #555;
-      font-size: 0.95rem;
-    }
-    footer {
-      background-color: #f0f7ff;
-      padding: 2.5rem 5%;
-      text-align: center;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #d0e5ff;
-    }
-    footer p { margin: 0.5rem 0; }
-    @media (max-width: 768px) {
-      header { flex-direction: column; padding: 1rem; }
-      nav ul { margin-top: 1rem; }
-      nav ul li { margin-left: 1rem; margin-right: 1rem; }
-      .hero h1 { font-size: 2.2rem; }
-      .hero p { font-size: 1rem; }
-      .cards { flex-direction: column; align-items: center; }
-      .card { width: 100%; max-width: 350px; }
-    }
-  </style>
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #feca57 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes titleGlow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                           0 0 40px rgba(255, 182, 193, 0.8),
+                           0 0 60px rgba(255, 105, 180, 0.6);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+                           0 0 50px rgba(255, 182, 193, 1),
+                           0 0 70px rgba(255, 105, 180, 0.8);
+            }
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out 0.5s forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: floatHeart 8s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(0deg);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 3s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .interactive-area {
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .magic-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .magic-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        .magic-button:active {
+            transform: scale(0.95);
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: rippleEffect 0.6s ease-out;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .love-burst {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .burst-heart {
+            position: absolute;
+            font-size: 30px;
+            animation: burstHeart 1s ease-out forwards;
+        }
+
+        @keyframes burstHeart {
+            0% {
+                transform: translate(0, 0) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--x), var(--y)) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .floating-emoji {
+            position: absolute;
+            font-size: 40px;
+            animation: floatEmoji 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        }
+
+        @keyframes floatEmoji {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Colegio Lincoln | ESI</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="que-es-esi.html">¿Qué es ESI?</a></li>
-        <li><a href="temas-clave.html">Temas Clave</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Educación Sexual Integral</h1>
-    <p>En el Colegio Lincoln creemos en una educación respetuosa, inclusiva y basada en derechos. Conocé por qué la ESI es fundamental para tu crecimiento, tu salud y tus relaciones.</p>
-    <a href="que-es-esi.html" class="btn">Aprender más</a>
-  </section>
-
-  <section class="intro">
-    <h2>¿Por qué ESI en el Colegio Lincoln?</h2>
-    <p>La Educación Sexual Integral no es solo sobre sexo. Es sobre identidad, respeto, afectos, diversidad, salud y derechos. Forma parte del plan educativo nacional y es un derecho de todos los estudiantes.</p>
-    <p>Este espacio fue creado por y para estudiantes, con el apoyo del equipo docente, para que puedas informarte con confianza, claridad y sin juicios.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Respeto y Diversidad</h3>
-        <p>Aprendé sobre la importancia de respetar todas las identidades, orientaciones y expresiones de género.</p>
-      </div>
-      <div class="card">
-        <h3>Salud y Autocuidado</h3>
-        <p>Información clara sobre salud sexual, métodos anticonceptivos y prevención de ITS.</p>
-      </div>
-      <div class="card">
-        <h3>Relaciones Sanas</h3>
-        <p>Cómo reconocer relaciones basadas en el respeto, el consentimiento y la comunicación.</p>
-      </div>
+    <div class="heart-container" id="heartContainer"></div>
+    
+    <div class="container">
+        <h1 class="main-title">Te amo mi princesita, ya te quiero besar el 🍑</h1>
+        <p class="subtitle">de parte de Hety ❤️</p>
+        
+        <div class="interactive-area">
+            <button class="magic-button" id="magicButton">Haz clic para magia ✨</button>
+        </div>
     </div>
-  </section>
 
-  <footer>
-    <p><strong>Colegio Lincoln</strong></p>
-    <p>ESI - Educación Sexual Integral | 2025</p>
-    <p>Contenido revisado por el equipo pedagógico. Adecuado para estudiantes adolescentes.</p>
-  </footer>
+    <div class="floating-emoji" style="top: 10%; left: 5%;">💕</div>
+    <div class="floating-emoji" style="top: 20%; right: 10%; animation-delay: 1s;">💖</div>
+    <div class="floating-emoji" style="bottom: 20%; left: 15%; animation-delay: 2s;">💝</div>
+    <div class="floating-emoji" style="bottom: 30%; right: 20%; animation-delay: 0.5s;">💗</div>
+
+    <script>
+        // Crear corazones flotantes
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = ['💖', '💕', '💗', '💝', '❤️', '💘'][Math.floor(Math.random() * 6)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            document.getElementById('heartContainer').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        // Crear destellos
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 3000);
+        }
+
+        // Efecto de onda en el botón
+        document.getElementById('magicButton').addEventListener('click', function(e) {
+            const button = e.currentTarget;
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple';
+            
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+            
+            // Crear explosión de corazones
+            createLoveBurst(e.clientX, e.clientY);
+            
+            // Cambiar texto temporalmente
+            const originalText = button.textContent;
+            button.textContent = '¡Te amo! 💕';
+            setTimeout(() => {
+                button.textContent = originalText;
+            }, 2000);
+        });
+
+        // Crear explosión de corazones
+        function createLoveBurst(x, y) {
+            const burst = document.createElement('div');
+            burst.className = 'love-burst';
+            burst.style.left = x + 'px';
+            burst.style.top = y + 'px';
+            document.body.appendChild(burst);
+            
+            for (let i = 0; i < 12; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'burst-heart';
+                heart.innerHTML = ['💖', '💕', '💗'][Math.floor(Math.random() * 3)];
+                
+                const angle = (i * 30) * Math.PI / 180;
+                const distance = 100;
+                heart.style.setProperty('--x', Math.cos(angle) * distance + 'px');
+                heart.style.setProperty('--y', Math.sin(angle) * distance + 'px');
+                
+                burst.appendChild(heart);
+            }
+            
+            setTimeout(() => {
+                burst.remove();
+            }, 1000);
+        }
+
+        // Iniciar animaciones
+        setInterval(createHeart, 800);
+        setInterval(createSparkle, 300);
+
+        // Efecto de parallax en el mouse
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.body.style.backgroundPosition = `${x * 50}% ${y * 50}%`;
+        });
+
+        // Crear más corazones al hacer clic en cualquier parte
+        document.addEventListener('click', (e) => {
+            if (e.target.id !== 'magicButton') {
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.className = 'heart';
+                        heart.innerHTML = '💖';
+                        heart.style.left = e.clientX + (Math.random() - 0.5) * 100 + 'px';
+                        heart.style.top = e.clientY + 'px';
+                        heart.style.animationDuration = '3s';
+                        document.getElementById('heartContainer').appendChild(heart);
+                        
+                        setTimeout(() => {
+                            heart.remove();
+                        }, 3000);
+                    }, i * 100);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
